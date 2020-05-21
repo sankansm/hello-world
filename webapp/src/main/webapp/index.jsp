@@ -4,7 +4,6 @@
 <h2> deployed on docker container using jenkins with ansible............</h2>
 <h1> demo....</h1
 
-<h1> ......</h1>>
 
 
 
