@@ -15,7 +15,7 @@ pipeline {
             }
             stage('Bake Image'){
                 steps{
-                sh 'packer build packer.json'
+                sh '/usr/bin/packer build packer.json'
 
                 }
             }
