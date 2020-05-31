@@ -24,7 +24,7 @@
   "provisioners": [
   {
     "type": "file",
-    "source": "**/**/webapp.war",
+    "source": "/var/lib/jenkins/workspace/overseer/webapp/target/webapp.war",
     "destination": "/tmp/webapp.war"
   },
   {
