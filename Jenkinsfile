@@ -26,6 +26,7 @@ pipeline {
                     
                     sh 'terraform apply -var component=${JOB_NAME}-${BUILD_NUMBER} -auto-approve'
                 }
+            }
 
             stage('Destroy'){
                 steps{
