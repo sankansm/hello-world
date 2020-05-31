@@ -3,7 +3,7 @@
       "aws_access_key": "AKIA2R6IOBQO4JB2M24K",
       "aws_secret_key": "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",
       "region": "us-east-1",
-      "component": "web-server"
+      "component": "{{app-name}}"
     },
     "builders": [{
       "type": "amazon-ebs",
