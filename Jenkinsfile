@@ -19,9 +19,23 @@ pipeline {
 
                 }
             }
-            
+            stage('Deploy'){
+                steps{
+                    input message: "Approve the Deploy?"
+                    sh 'terraform init'
+                    
+                    sh 'terraform apply -var component=${JOB_NAME}-${BUILD_NUMBER} -auto-approve'
+                }
+
+            stage('Destroy'){
+                steps{
+                    input message: "Destroy?"
+                    
+                    sh 'terraform destroy -var component=${JOB_NAME}-${BUILD_NUMBER} -auto-approve'
+                }
+            }
+
 
         }
 
 }
-
