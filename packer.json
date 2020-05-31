@@ -1,0 +1,37 @@
+{
+    "variables": {
+      "aws_access_key": "AKIA2R6IOBQO4JB2M24K",
+      "aws_secret_key": "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",
+      "region": "us-east-1",
+      "component": "web-server"
+    },
+    "builders": [{
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "source_ami": "ami-09d45e01b59754402",
+      "region": "{{user `region`}}",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "{{user `component`}}",
+    "tags": {
+        "Name": "{{user `component` }}",
+        "Env": "DEMO"
+
+      }
+  }],           
+
+  "provisioners": [
+  {
+    "type": "file",
+    "source": "webapp.war",
+    "destination": "/tmp/webapp.war"
+  },
+  {
+    "type": "shell",
+    "inline": ["sudo cp /tmp/webapp.war /opt/tomcat/webapps/"]
+  }
+
+  
+  ]
+}
