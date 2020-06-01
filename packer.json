@@ -1,7 +1,7 @@
 {
     "variables": {
-      "aws_access_key": "AKIA2R6IOBQO4JB2M24K",
-      "aws_secret_key": "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",
+      "aws_access_key": "",
+      "aws_secret_key": "",
       "region": "us-east-1",
       "component": "{{app-name}}"
     },
