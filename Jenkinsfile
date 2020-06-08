@@ -28,13 +28,7 @@ pipeline {
                 }
             }
 
-            stage('Destroy'){
-                steps{
-                    input message: "Destroy?"
-                    
-                    sh 'terraform destroy -var component=${JOB_NAME}-${BUILD_NUMBER} -auto-approve'
-                }
-            }
+            
 
 
         }
