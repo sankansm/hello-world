@@ -13,13 +13,13 @@ pipeline {
                 }
             }
             }
-	stages {
+        
         stage('Test') {
             steps {
                 sh 'make check'
             }
         }
-    }
+    
     post {
         always {
             junit '**/target/*.xml'
@@ -38,12 +38,12 @@ pipeline {
                 steps{
                     input message: "Approve the Deploy?"
                     sh 'terraform init'
-                    
+
                     sh 'terraform apply -var component=${JOB_NAME}-${BUILD_NUMBER} -auto-approve'
                 }
             }
 
-            
+
 
 
         }
