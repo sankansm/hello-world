@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh 'make check'
             }
-        }
+        
     
     post {
         always {
@@ -28,6 +28,8 @@ pipeline {
             mail to: team@example.com, subject: 'The Pipeline failed :('
         }
     }
+    }
+        
             stage('Bake Image'){
                 steps{
                 sh "/usr/bin/packer build -var 'component=${JOB_NAME}-${BUILD_NUMBER}' packer.json"
