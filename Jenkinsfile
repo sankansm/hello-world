@@ -17,8 +17,8 @@ pipeline {
             steps {
                 sh 'make check'
             }
-        }
-    }
+        
+    
     post {
         always {
             junit '**/target/*.xml'
@@ -27,6 +27,7 @@ pipeline {
             mail to: team@example.com, subject: 'The Pipeline failed :('
         }
     }
+            }
         
         
         
