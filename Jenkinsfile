@@ -13,6 +13,21 @@ pipeline {
                 }
             }
             }
+	stages {
+        stage('Test') {
+            steps {
+                sh 'make check'
+            }
+        }
+    }
+    post {
+        always {
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: team@example.com, subject: 'The Pipeline failed :('
+        }
+    }
             stage('Bake Image'){
                 steps{
                 sh "/usr/bin/packer build -var 'component=${JOB_NAME}-${BUILD_NUMBER}' packer.json"
