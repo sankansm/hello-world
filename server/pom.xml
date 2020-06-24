@@ -4,8 +4,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.example.maven-project</groupId>
-    <artifactId>maven-project</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>overseer</artifactId>
     <version>1.0.1</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
