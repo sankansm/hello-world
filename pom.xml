@@ -23,9 +23,9 @@
 
   <distributionManagement>
     <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
+      <id>ossrh</id>
+      <name>nexus-repo</name>
+      <url>http://3.83.26.179:8081/</url>
     </site>
   </distributionManagement>
 
