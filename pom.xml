@@ -25,7 +25,7 @@
     <site>
       <id>ossrh</id>
       <name>nexus-repo</name>
-      <url>http://3.83.26.179:8081/</url>
+      <url>http://3.83.26.179:8081/content/repositories/maven-releases</url>
     </site>
   </distributionManagement>
 
