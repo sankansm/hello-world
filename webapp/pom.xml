@@ -12,7 +12,7 @@
 
   <artifactId>webapp</artifactId>
   <packaging>war</packaging>
-  <name>overeer</name>
+  <name>overseer</name>
   <description>overseer project</description>
 
   <build>
