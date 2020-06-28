@@ -25,7 +25,7 @@
   {
     "type": "file",
     "source": "/var/lib/jenkins/workspace/overseer/webapp/target/*.war",
-    "destination": "/tmp/*.war"
+    "destination": "/tmp/"
   },
   {
     "type": "shell",
