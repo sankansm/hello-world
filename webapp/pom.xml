@@ -12,11 +12,11 @@
 
   <artifactId>webapp</artifactId>
   <packaging>war</packaging>
-  <name>Webapp</name>
+  <name>webapp</name>
   <description>Webapp.</description>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
+	  <finalName>${project.artifactId}-${BUILD_NUMBER}</finalName>
 
     <plugins>
       <plugin>
