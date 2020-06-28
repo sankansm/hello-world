@@ -27,7 +27,7 @@ pipeline {
         
             stage('Bake Image'){
                 steps{
-                sh "/usr/bin/packer build -var 'build=${BUILD_NUMBER}'-var 'component=${JOB_NAME}-${BUILD_NUMBER}' packer.json"
+                sh "/usr/bin/packer build -var 'build=${BUILD_NUMBER}' -var 'component=${JOB_NAME}-${BUILD_NUMBER}' packer.json"
 
                 }
             }
