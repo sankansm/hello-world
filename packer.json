@@ -24,12 +24,12 @@
   "provisioners": [
   {
     "type": "file",
-    "source": "/var/lib/jenkins/workspace/overseer/webapp/target/webapp.war",
-    "destination": "/tmp/webapp.war"
+    "source": "/var/lib/jenkins/workspace/overseer/webapp/target/*.war",
+    "destination": "/tmp/*.war"
   },
   {
     "type": "shell",
-    "inline": ["sudo cp /tmp/webapp.war /opt/tomcat/webapps/"]
+    "inline": ["sudo cp /tmp/*.war /opt/tomcat/webapps/"]
   }
 
   
