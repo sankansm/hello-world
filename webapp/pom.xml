@@ -5,9 +5,9 @@
 
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>overseer</artifactId>
     <version>1.0.1</version>
     <relativePath>../pom.xml</relativePath>
+    <artifactId>overseer</artifactId>
   </parent>
 
   <artifactId>webapp</artifactId>
