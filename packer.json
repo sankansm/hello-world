@@ -4,7 +4,8 @@
       "aws_secret_key": "",
       "region": "us-east-1",
       "component": "{{app-name}}",
-      "build_number": "{{build_no}}"
+      "build_number": "{{build_no}}",
+      "job": "{{job_name}}"
     },
     "builders": [{
       "type": "amazon-ebs",
@@ -25,7 +26,7 @@
   "provisioners": [
   {
     "type": "file",
-    "source": "/var/lib/jenkins/workspace/overseer/webapp/target/webapp-{{user `build_number`}}.war",
+    "source": "/var/lib/jenkins/workspace/${{user 'job'}}/webapp/target/webapp-{{user `build_number`}}.war",
     "destination": "/tmp/webapp-{{user `build_number`}}.war"
   },
   {
